@@ -16,6 +16,7 @@ html
 
 body
 {
+    height: 100%;
     margin: 0;
 }
 
@@ -60,4 +61,24 @@ nav ol li a:hover
     transition: 0.2s;
     background-color: var(--light-gray);
     border-radius: 2%;
+}
+
+main
+{
+    height: 100%;
+    margin: 0.5%;
+    background-color: white;
+}
+
+.main-content-wrap
+{
+    padding: 4% 2.5%;
+}
+
+.main-content-shop
+{
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--light-red);
+    opacity: 0.8;
 }
