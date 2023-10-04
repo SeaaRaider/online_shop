@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <!--CSS-->
-    <link rel="stylesheet" href="/account/account.css" type="text/css">
+    <link rel="stylesheet" href="account.css" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Google fonts-->
@@ -15,11 +15,12 @@
 </head>
 
 <body>
+
     <div class="header-wrap">
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: var(--light-red);"></i>ShopIT</div>
         <nav>
             <ol>
-                <li><a href="/index.html">Store</a></li>
+                <li><a href="/online_shop/index.html">Store</a></li>
                 <li><a href="account.html" style="color: var(--light-red);">Account</a></li>
             </ol>
         </nav>
@@ -27,17 +28,25 @@
     <main>
         <div class="main-content-wrap">
             <div class="main-content-log-in">
-                <form>
+                <form action="log-in.php" method="post" novalidate>
                     <div class="input-box">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" name="username" placeholder="Username" >
+                        <input type="text" name="username" placeholder="Username" required>
                     </div>
                     <div class="input-box">
                         <i class="fa-solid fa-key"></i>
-                        <input type="text" name="password" placeholder="Password">
+                        <input type="text" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-box">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" name="password_confirmation" placeholder="Password" required>
                     </div>
                     <div class="button-box">
-                        <button class="submit-log-in">Log-in</button>
+                        <button class="submit-log-in" name="submit">Log-in</button>
                     </div>
                 </form>
             </div>
