@@ -25,14 +25,13 @@ session_start();
         <nav>
             <ol>
                 <?php if (isset($_SESSION["user_id"])): ?>
-                    <li>You are logged in.</li>
-                    <li><a href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a href="account-login/login.php">Account</a></li>
+                    <li><a class="logout-cy" href="account-login/logout_func.php">Log out</a></li>
+                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
                 <?php else: ?>
-                    <li><a href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a href="account-login/login.php">Account</a></li>
+                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
                 <?php endif; ?>
-                
             </ol>
         </nav>
     </div>

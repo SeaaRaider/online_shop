@@ -22,8 +22,8 @@
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: var(--light-red);"></i>ShopIT</div>
         <nav>
             <ol>
-                <li><a href="/online_shop/index.php">Store</a></li>
-                <li><a href="login.php" style="color: var(--light-red);">Account</a></li>
+                <li><a class="storehref-cy" href="/online_shop/index.php">Store</a></li>
+                <li><a class="accounthref-cy" href="login.php" style="color: var(--light-red);">Account</a></li>
             </ol>
         </nav>
     </div>
