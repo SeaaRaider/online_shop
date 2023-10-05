@@ -16,6 +16,7 @@
 
 <?php
 session_start();
+include __DIR__ . "/../mySQL_scripts/fetch_logged_user.php";
 ?>
 
 <body>
@@ -23,8 +24,8 @@ session_start();
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: #ed2939;"></i>ShopIT</div>
         <nav>
             <ol>
-                <?php if (isset($_SESSION["user_id"])): ?>
-                    <li></li>
+                <?php if (isset($user)): ?>
+                    <li>Hello <span style="color: var(--light-red);"><?= htmlspecialchars($user["name"]) ?></span></li>
                     <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
                     <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
                 <?php else: ?>
