@@ -14,13 +14,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 
+<?php
+session_start();
+
+?>
+
 <body>
     <div class="header-wrap">
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: #ed2939;"></i>ShopIT</div>
         <nav>
             <ol>
-                <li><a href="index.html" style="color: var(--light-red);">Store</a></li>
-                <li><a href="account/account.html">Account</a></li>
+                <?php if (isset($_SESSION["user_id"])): ?>
+                    <li>You are logged in.</li>
+                    <li><a href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a href="account-login/login.php">Account</a></li>
+                <?php else: ?>
+                    <li><a href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a href="account-login/login.php">Account</a></li>
+                <?php endif; ?>
+                
             </ol>
         </nav>
     </div>
