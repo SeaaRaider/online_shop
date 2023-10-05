@@ -4,7 +4,7 @@ $is_invalid = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST')
 {
-    $mysqli = require __DIR__ . '/database_conn.php';
+    $mysqli = require __DIR__ . '/online_shop/mySQL_scripts/database_conn.php';
 
     $sql = sprintf("SELECT * FROM user
             WHERE email ='%s'",
@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
         if(password_verify($_POST["password"], $user["password_hash"]))
         {
             session_start();
+
+            session_regenerate_id();
 
             $_SESSION["user_id"] = $user["id"];
 

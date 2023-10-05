@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <!--CSS-->
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="account.css" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Google fonts-->
@@ -26,47 +26,16 @@ session_start();
                 <?php if (isset($_SESSION["user_id"])): ?>
                     <li></li>
                     <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account_page/account.php">Account</a></li>
+                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
                 <?php else: ?>
                     <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account_login/login.php">Account</a></li>
+                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
                 <?php endif; ?>
             </ol>
         </nav>
     </div>
     <main>
         <div class="main-content-wrap">
-            <div class="main-content-shop">
-                Shop
-            </div>
-            <div class="main-content-listing-count">
-                Showing some results
-            </div>
-            <div class="main-content-item-container">
-                <div class="main-content-item">
-                    <a href="!">
-                        <div class="item-picture">
-                            <img src="images/shoe.jpg">
-                        </div>
-                        <div class="item-name">
-                            Shoe
-                        </div>
-                        <div class="item-price">
-                            $199.00
-                        </div>
-                    </a>
-                </div>
-                <div class="main-content-item">
-                    <a href="!">
-                        
-                    </a>
-                </div>
-                <div class="main-content-item">
-                    <a href="!">
-                        
-                    </a>
-                </div>
-            </div>
         </div>
     </main>
     <footer>

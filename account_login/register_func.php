@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = require __DIR__ . "/database_conn.php";
+$mysqli = require __DIR__ . "/online_shop/mySQL_scripts/database_conn.php";
 
 if(empty($_POST["username"]))
 {
@@ -34,7 +34,7 @@ if($_POST["password"] !== $_POST["password_confirmation"])
 
 $password_hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-$mysqli = require __DIR__ . "/database_conn.php";
+$mysqli = require __DIR__ . "/online_shop/mySQL_scripts/database_conn.php";
 
 $sql = "INSERT INTO user (name, email, password_hash)
         VALUES(?,?,?)";
@@ -63,5 +63,5 @@ catch (mysqli_sql_exception $exc)
     }
 }
 
-echo "Signup complete";
+header("Location: account_login/login.php");
 
