@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <!--CSS-->
-    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/index.css" type="text/css">
+    <link rel="stylesheet" href="/stylesheets/navbar_background.css" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Google fonts-->
@@ -14,24 +15,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 
-<?php
-session_start();
-include "mySQL_scripts/fetch_logged_user.php";
-?>
+<!--EJS can get backend JS objects into frontend-->
 
 <body>
     <div class="header-wrap">
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: #ed2939;"></i>ShopIT</div>
         <nav>
             <ol>
-                <?php if (isset($user)): ?>
-                    <li>Hello <span style="color: var(--light-red);"><?= htmlspecialchars($user["name"]) ?></span></li>
-                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account_page/account.php">Account</a></li>
-                <?php else: ?>
-                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account_login/login.php">Account</a></li>
-                <?php endif; ?>
+                <li><a class="store-href-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                <li><a class="account-href-cy" href="account_page/account.php">Account</a></li>
+                <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                <li><a class="account-login-href-cy" href="account_login/login.php">Account</a></li>
             </ol>
         </nav>
     </div>

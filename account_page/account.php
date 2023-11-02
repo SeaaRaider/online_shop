@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <!--CSS-->
     <link rel="stylesheet" href="account.css" type="text/css">
+    <link rel="stylesheet" href="/online_shop/navbar_background.css" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Google fonts-->
@@ -26,17 +27,22 @@ include __DIR__ . "/../mySQL_scripts/fetch_logged_user.php";
             <ol>
                 <?php if (isset($user)): ?>
                     <li>Hello <span style="color: var(--light-red);"><?= htmlspecialchars($user["name"]) ?></span></li>
-                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
+                    <li><a class="store-href-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a class="account-href-cy" href="account-login/login.php">Account</a></li>
                 <?php else: ?>
-                    <li><a class="storehref-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
-                    <li><a class="accounthref-cy" href="account-login/login.php">Account</a></li>
+                    <li><a class="store-href-cy" href="index.php" style="color: var(--light-red);">Store</a></li>
+                    <li><a class="account-href-cy" href="account-login/login.php">Account</a></li>
                 <?php endif; ?>
             </ol>
         </nav>
     </div>
     <main>
         <div class="main-content-wrap">
+            <div>
+            <?php if (isset($user)): ?>
+                    <a class="logout-cy" href="logout_func.php">Logout</a>
+            <?php endif; ?>
+            </div>
         </div>
     </main>
     <footer>

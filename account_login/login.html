@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
     <!--CSS-->
-    <link rel="stylesheet" href="login.css" type="text/css">
+    <link rel="stylesheet" href="login_register.css" type="text/css">
+    <link rel="stylesheet" href="/online_shop/navbar_background.css" type="text/css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--Google fonts-->
@@ -15,29 +16,22 @@
 </head>
 
 <body>
-
-<?php include 'login_func.php';?>
-
     <div class="header-wrap">
         <div class="header-logo"><i class="fa-solid fa-shop" style="color: var(--light-red);"></i>ShopIT</div>
         <nav>
             <ol>
-                <li><a class="storehref-cy" href="/online_shop/index.php">Store</a></li>
-                <li><a class="accounthref-cy" href="login.php" style="color: var(--light-red);">Account</a></li>
+                <li><a class="store-href-cy" href="/online_shop/index.php">Store</a></li>
+                <li><a class="account-href-cy" href="login.php" style="color: var(--light-red);">Account</a></li>
             </ol>
         </nav>
     </div>
     <main>
         <div class="main-content-wrap">
             <div class="main-content-log-in">
-                <form method="post" novalidate>
-                    <?php if ($is_invalid): ?>
-                        <p>Invalid login</p>
-                    <?php endif; ?>
+                <form action="/login" method="post" novalidate>
                     <div class="input-box">
                         <i class="fa-solid fa-envelope"></i>
-                        <input class="email-cy" type="text" name="email" placeholder="Email" required
-                        value="<?= htmlspecialchars($_POST["email"] ?? "") ?>">
+                        <input class="email-cy" type="text" name="email" placeholder="Email" required>
                     </div>
                     <div class="input-box">
                         <i class="fa-solid fa-lock"></i>
@@ -48,7 +42,7 @@
                     </div>
                 </form>
                 <div>
-                    <a class="register-cy" href="register.html">Register here</a>
+                    <a class="account-register-href-cy" href="register.html">Register here</a>
                 </div>
             </div>
         </div>

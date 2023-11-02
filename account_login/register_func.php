@@ -63,5 +63,5 @@ catch (mysqli_sql_exception $exc)
     }
 }
 
-header("Location: account_login/login.php");
+header("Location: login.php");
 
